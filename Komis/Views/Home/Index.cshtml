@@ -1,13 +1,8 @@
-﻿@model IEnumerable<Komis.Models.Samochod>
+﻿@model Komis.ViewModels.HomeVM
 
-@{
-    Layout = "_Layout";
-}
-
-
-<h2>@ViewBag.tytul</h2>
+<h2>@Model.Tytul</h2>
     
-    @foreach (var samochod in Model)
+    @foreach (var samochod in Model.Samochody)
     {
         <div>
             <h2>@samochod.Marka</h2>
