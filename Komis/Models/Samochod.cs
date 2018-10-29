@@ -15,5 +15,6 @@
         public string ZdjecieURL { get; set; }
         public string MiniaturkaURL { get; set; }
         public bool JestSamochodemTygodnia { get; set; }
+        public bool JestWCentrali { get; set; }
     }
 }

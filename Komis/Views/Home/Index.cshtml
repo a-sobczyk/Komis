@@ -1,17 +1,33 @@
 ﻿@model Komis.ViewModels.HomeVM
 
-<h2>@Model.Tytul</h2>
-    
+<div class="container">
+    <div class="row">
+        <h2>@Model.Tytul</h2>
+    </div>
+</div>
+
     @foreach (var samochod in Model.Samochody)
     {
-        <div>
-            <h2>@samochod.Marka</h2>
-            <h2>@samochod.Model</h2>
-            <h3>@samochod.RokProdukcji</h3>
-            <h3>@samochod.Przebieg</h3>
-            <h4>@samochod.Pojemnosc</h4>
-            <h4>@samochod.Moc</h4>
-            <h5>@samochod.Cena.ToString("c")</h5>
-            <p>@samochod.Opis</p>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="img-thumbnail">
+                <img src="@samochod.MiniaturkaURL" alt="" />
+                <div class="figure-caption">
+                    <h3>@samochod.Cena.ToString("c")</h3>
+                    <h3>
+                        @samochod.Marka - @samochod.Model - @samochod.RokProdukcji
+                    </h3>
+                    <h4>
+                        Przebieg: @samochod.Przebieg 
+                    </h4>
+                    <h4>
+                        Pojemność: @samochod.Pojemnosc
+                    </h4>
+                    <h4>
+                        Moc: @samochod.Moc
+                    </h4>
+                    <p>@samochod.Opis</p>
+                    <h5>Jest w centrali: @samochod.JestWCentrali</h5>
+                </div>
+            </div>
         </div>
     }
