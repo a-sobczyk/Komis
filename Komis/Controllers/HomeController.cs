@@ -30,5 +30,15 @@ namespace Komis.Controllers
 
             return View(homeVM);  
         }
+
+        public IActionResult Szczegoly(int id)
+        {
+            var samochod = this.samochod.PobierzSamochodOId(id);
+
+            if (id == null)
+                return NotFound();
+
+            return View(samochod);
+        }
     }
 }

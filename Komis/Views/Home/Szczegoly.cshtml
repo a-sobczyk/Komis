@@ -1,0 +1,20 @@
+﻿@model Samochod
+
+<div class="container">
+    <div class="row-12">
+        <h3>@Model.Marka - @Model.Model</h3>
+    </div>
+</div>
+
+<div class="img-thumbnail">
+    <img src="@Model.ZdjecieURL" alt="@Model.Marka"/>
+    <div class="figure-caption">
+        <h3 class="float-right">@Model.Cena</h3>
+        <h4>@Model.RokProdukcji</h4>
+        <h4>@Model.Przebieg</h4>
+        <h4>@Model.Pojemnosc</h4>
+        <h4>@Model.Moc</h4>
+        <p>@Model.Opis</p>
+    </div>
+</div>
+
